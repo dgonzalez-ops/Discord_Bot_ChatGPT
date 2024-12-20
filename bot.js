@@ -9,17 +9,17 @@ const client = new Client ({
 });
 
 client.on(Events.ClientReady, c => {
-    console.log("Bot conectado con exito");
+    console.log("Bot connected successfully.");
 
-    c.user.setActivity("deportar Marroquis...");
+    c.user.setActivity("AI stuff...");
 
-    const exampleCommand = new SlashCommandBuilder()
+    const exampleCommand = new SlashCommandBuilder() // Creating the /example command
         .setName('example')
         .setDescription('this is an example command');
     c.application.commands.create(exampleCommand);
 });
 
-client.on (Events.InteractionCreate, async interaction => {
+client.on (Events.InteractionCreate, async interaction => { // Function of the command
     if(!interaction.isChatInputCommand()) return;
 
     if (interaction.commandName === 'example') {

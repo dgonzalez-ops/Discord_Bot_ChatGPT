@@ -6,13 +6,13 @@ const prompt = async () => {
     });
 
     const messages = [
-        { role: 'assistant', content:'Youre an assitant'},
-        {role: 'user', content: 'You are a helpful assistant. Provide clear and accurate responses to user queries.'} // Your prompt in here
+        { role: 'assistant', content:'You are a helpful assistant. Provide clear and accurate responses to user queries.'},
+        {role: 'user', content: ''} // Your prompt in here
     ];
 
     const completion = await openai.chat.completions.create({
         messages,
-        model: 'gpt-3.5-turbo'
+        model: 'gpt-3.5-turbo' // gpt model (Check costs of each one in the OpenAI API webpage)
     });
     
     if (completion && completion.choices && completion.choices[0] && completion.choices[0].message) {
@@ -23,4 +23,4 @@ const prompt = async () => {
     }
 };
 
-module.exports = {prompt};
+module.exports = {prompt}; 
