@@ -22,3 +22,4 @@ A Base for making your personal Discord bot with the API of OpenAI.
 
 - Customize the prompt given in gpt.js file
 - Update the bot.js file with the new prompt
+- Start it!
