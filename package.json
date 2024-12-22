@@ -5,8 +5,8 @@
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --env-file VariablesEntorno.env bot.js",
-    "dev": "node --watch --env-file VariablesEntorno.env bot.js"
+    "start": "node --env-file .env bot.js",
+    "dev": "node --watch --env-file .env bot.js"
   },
   "keywords": [],
   "author": "",
